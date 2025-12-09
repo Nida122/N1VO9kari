@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UST配布 | N1VO9の倉庫</title>
+    <meta name="description" content="Simple monochrome UST distribution page">
+    <link rel="shortcut icon" href="images/gon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo"><u>UST</u> ▜▚▙.</div>
+        <div class="socials">
+            <a href="https://x.com/@21vo9" target="_blank"><img src="images/X.png" alt="Twitter" style="margin-left:1rem;"></a>
+            <a href="https://youtube.com/@nycta-nidoku?si=e53RmFhndZMLWxGj" target="_blank"><img src="images/youtube.png" alt="YouTube" style="margin-left:1rem;"></a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>UST Files</h1>
+                <p>UTAU向けUSTの配布ページ。</p>
+                <a href="index.html" class="btn btn-primary" style="margin-left:1rem;">HOME</a>
+                <a href="characters.html" class="btn btn-primary" style="margin-left:1rem;">Voicebanks</a>
+                <a href="ust.html" class="btn btn-primary" style="margin-left:1rem;">UST Library</a>
+            </div>
+        </section>
+
+        <section id="list" class="list-section">
+            <div class="section-header">
+                <h2>Library</h2>
+                <span class="line"></span>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search by title, artist...">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <div class="filter-tags" id="filter-container">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="VCV">VCV</button>
+                    <button class="filter-btn" data-filter="CVVC">CVVC</button>
+                    <button class="filter-btn" data-filter="CV">CV</button>
+                </div>
+            </div>
+
+            <div class="results-count" id="results-count">すべて表示/Showing all items</div>
+
+            <div class="ust-grid" id="ust-grid">
+                <!-- Dynamic Content will be loaded here -->
+            </div>
+
+            <div class="load-more-container">
+                <button id="load-more-btn" class="btn btn-outline" style="display: none;">Load More</button>
+            </div>
+        </section>
+
+        <section id="terms" class="terms-section">
+            <div class="terms-content">
+                <h2>利用規約/Terms of Use</h2>
+                <p>□<strong>商用利用、再配布、自作発言</strong>は<span style="color:red;">禁止</span>です。
+                <br>□クレジット表記は<strong>任意</strong>ですが、記載していただける場合は<strong>「N1VO9-니부쿠」</strong>または<strong>動画リンク</strong>をご利用ください。</p>
+                <ul>
+                    <li>再配布禁止/DO NOT Redistribute</li>
+                    <li>クレジット表記/Credit is Required</li>
+                    <li>商用利用不可/Non-Commercial Use Only</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>&copy; 2025 All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

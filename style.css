@@ -1,0 +1,470 @@
+:root {
+    --primary: #1a1a1a;
+    --secondary: #f2f2f2;
+    --surface: #ffffff;
+    --line: #dddddd;
+
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.site-header:hover {
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.site-header nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.site-header nav a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.site-header nav a:hover {
+    opacity: 0.5;
+}
+
+/* Hero */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    margin-top: 60px;
+    border-bottom: 1px solid var(--primary);
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+/* List Section */
+.list-section {
+    padding: 6rem 4rem;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+
+.section-header .line {
+    height: 1px;
+    background-color: var(--primary);
+    width: 100%;
+}
+
+.ust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.ust-card {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+}
+
+.ust-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 0px var(--primary);
+    border-color: var(--primary);
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.song-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.original-artist {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.tags {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags span {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--secondary);
+    border-radius: 99px;
+    font-weight: 500;
+}
+
+/* Terms */
+.terms-section {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 6rem 4rem;
+}
+
+.terms-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.terms-content ul {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.terms-content li {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    border: 1px solid var(--secondary);
+    padding: 0.5rem 1rem;
+}
+
+/* Footer */
+.site-footer {
+    padding: 2rem 4rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.8rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials img {
+  width: 100%;
+  max-width: 40px;  /* 最大幅制限 */
+  height: auto;      /* アスペクト比 */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .hero-section {
+        padding: 0 1.5rem;
+        height: auto;
+        min-height: 60vh;
+        padding-top: 100px;
+        padding-bottom: 4rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .list-section,
+    .terms-section,
+    .site-footer {
+        padding: 3rem 1.5rem;
+    }
+
+    .ust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .socials a {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Controls */
+.controls {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    background-color: transparent;
+    border: 1px solid var(--line);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: var(--primary);
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.filter-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--line);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+}
+
+.results-count {
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    text-align: right;
+}
+
+.load-more-container {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    opacity: 0.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* ===========================
+   キャラ詳細ページ追加CSS
+   =========================== */
+
+.character-section {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.character-info {
+    flex: 1;
+}
+
+.character-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.profile-list {
+    margin-top: 1rem;
+    border-top: 1px solid var(--line);
+}
+
+.profile-row {
+    display: flex;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.profile-row .label {
+    width: 120px;
+    opacity: 0.8;
+}
+
+.profile-row .value {
+    flex: 1;
+}
+
+.relation-list {
+    margin-left: 1rem;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.character-visual img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+}
